@@ -1,0 +1,24 @@
+CM 
+CE
+SY anHeight=25	'this is the antenna hight
+SY big=0.0365
+SY small=0.026
+SY handle=0.34375
+SY bigLength=4.7552
+SY smallLength=1.5885
+SY dist2source=0.3593
+SY horiz=0.2292
+GW	1	1	0	0	anHeight	0	0	anHeight+handle	big
+GW	2	1	0	0	anHeight+handle	0	0	anHeight+handle+dist2source	big
+GW	3	11	0	0	anHeight+handle+dist2source	0	0	anHeight+handle+bigLength	small
+GW	4	1	0	0	anHeight+handle	horiz	0	anHeight+handle	small
+GW	5	1	horiz	0	anHeight+handle	horiz	0	anHeight+handle+dist2source	small
+GW	6	4	horiz	0	anHeight+handle+dist2source	horiz	0	anHeight+handle+bigLength	small
+GW	7	1	0	0	anHeight+handle+dist2source	horiz	0	anHeight+handle+dist2source	big/5
+GS	0	0	0.3048
+GE	1
+GN	2	0	0	0	17	0.007
+EK
+EX	0	7	1	0	1	0	0	0
+FR	0	0	0	0	146	0
+EN
